@@ -1,0 +1,1 @@
+# This is a simple game made using jQuery, which calculates and displays your reaction time taken to click circle or ractangle.

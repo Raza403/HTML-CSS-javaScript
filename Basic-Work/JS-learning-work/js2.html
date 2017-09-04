@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript</title>
+
+</head>
+
+<body>
+    <p id="hello">Hello world!</p>
+    <p id="second-p">javaScript is ...</p>
+    <p id="empty-p"></p>
+    <p id="more-text">Here is some more text!</p>
+    <button id="style-text">Style Text</button>
+    <button id="create-b">Create text</button>
+    <button id="tbutton">Change text</button>
+    <button id="sec-but">Second button</button>
+    <script type="text/javascript">
+        document.getElementById('tbutton').onclick = function () {
+            document.getElementById('hello').innerHTML = "Hello Ahmed";
+        }
+        document.getElementById('sec-but').onclick = function () {
+            document.getElementById('second-p').innerHTML = "I think " + document.getElementById('second-p').innerHTML +
+                " Awesome!";
+        }
+        // We can add forms, any kind of html like this below.
+        document.getElementById('create-b').onclick = function () {
+            document.getElementById('empty-p').innerHTML = ("<h2>Hi There!</h2>")
+        }
+        document.getElementById('style-text').onclick = function () {
+            document.getElementById('more-text').style.fontSize = "30px"
+            document.getElementById('more-text').style.color = "red"
+            document.getElementById('more-text').style.display = "none"
+        }
+    </script>
+</body>
+
+</html>

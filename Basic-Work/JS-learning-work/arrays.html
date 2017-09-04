@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //declaring an array
+        var myarray = new Array();
+        //Adiing items to array
+        myarray[0] = "noodles";
+        myarray[1] = "chocolate"
+        //Used for view in the console
+        console.log(myarray);
+        var tweets = [];
+        tweets[0] = "Hi there"
+        tweets[1] = "hello"
+        /*Adding new element to the 
+        array just another way*/
+        tweets.push ("push tweet")
+        console.log(tweets);
+        /*Deleting an element, starting
+        from element 1 and delete 2 items
+        in this example*/
+        tweets.splice(1,2);
+        console.log(tweets);
+        /*Adding array element at first
+         place or [0]  */
+        tweets.splice(0,0, "First tweets");
+        console.log(tweets);
+        /* This is replacing of first element
+        of array with new one, starting from [0]
+        then deleting 1 element and adding new
+        element at that place */
+        tweets.splice(0,1, "replace first tweet","Can also add more");
+        console.log(tweets);
+    </script>
+</body>
+</html>

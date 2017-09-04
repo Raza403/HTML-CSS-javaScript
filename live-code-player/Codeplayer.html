@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="jquery.js"></script>
+    <title>Code player</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #head {
+            height: 30px;
+            width: 100%;
+            background-color: #EDEDED;
+        }
+
+        h2 {
+            float: left;
+            margin-left: 5px;
+            margin-top: -1px;
+            padding-right: 320px;
+        }
+
+        .top {
+            float: left;
+            border: 1px solid grey;
+            border-right: none;
+            margin-top: 6px;
+            padding: 0px 5px;
+        }
+
+        #output {
+            border-right: 1px solid grey;
+        }
+
+        .active {
+            background-color: #b2c8e8;
+        }
+
+        .highlight {
+            background-color: grey;
+        }
+
+        #bodyContainer {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        textarea {
+            resize: none;
+            border-top: none;
+        }
+
+        .panel {
+            float: left;
+            width: 50%;
+            border-left: none;
+            border-right: 1px solid grey;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">
+        <h2>CodePlayer</h2>
+        <div class="top active" id="html">HTML</div>
+        <div class="top" id="css">CSS</div>
+        <div class="top" id="javascript">JavaScript</div>
+        <div class="top active" id="output">Output</div>
+    </div>
+
+    </div>
+    <div id="bodyContainer">
+        <textarea id="htmlpanel" class="panel"><p id="para"></p></textarea>
+        <textarea id="csspanel" class="panel hidden">p {color: green;}</textarea>
+        <textarea id="javascriptpanel" class="panel hidden">document.getElementById("para").innerHTML = "This is made by Ahmed";</textarea>
+        <iframe id="outputpanel" class="panel"></iframe>
+    </div>
+    <script type="text/javascript">
+        function updatePage() {
+            $("iframe").contents().find("html").html("<html><head><style type='text/css'>" + $("#csspanel").val() +
+                "</style></head><body>" + $("#htmlpanel").val() + "</body></html>");
+            document.getElementById("outputpanel").contentWindow.eval($("#javascriptpanel").val());
+        }
+        $(".top").hover(function () {
+            $(this).addClass("highlight");
+        }, function () {
+            $(this).removeClass("highlight");
+        });
+        $(".top").click(function () {
+            $(this).toggleClass("active");
+            $(this).removeClass("highlight");
+            var panelid = $(this).attr("id") + "panel";
+            $("#" + panelid).toggleClass("hidden");
+            var numOfActivePannels = 4 - $(".hidden").length;
+            $(".panel").width(($(window).width() / numOfActivePannels) - 5);
+
+        });
+        $(".panel").height($(window).height() - $("head").height() - 40);
+        $(".panel").width(($(window).width() / 2) - 5);
+        updatePage();
+        $("textarea").on('change keyup paste', function () {
+            updatePage();
+        });
+    </script>
+</body>
+
+</html>

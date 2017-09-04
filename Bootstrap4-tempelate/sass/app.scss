@@ -1,0 +1,24 @@
+@import "../bower_components/bootstrap/scss/bootstrap";
+body,html{
+    height: 100%;
+}
+/* Cover section */
+#cover{
+    background: #222 url(../img/stars.jpg) center center no-repeat;
+    background-size: cover;
+    color: $white;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center
+}
+#cover-caption{
+    width: 100%;
+}
+.carousel-item{
+    img{
+        max-height: 600px;
+        width: 100%;
+    }
+
+}

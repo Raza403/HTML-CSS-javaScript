@@ -1,0 +1,1 @@
+# This repo contains some of my javascript/jQuery practice activites.

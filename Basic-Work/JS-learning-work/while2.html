@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>How many fingers are you holding up?</p>
+    <select id="in">
+        <option >1</option>
+        <option >2</option>
+        <option >3</option>
+        <option >4</option>
+        <option >5</option>
+    </select>
+    <p><button id="enter">Enter</button></p>
+    <script type="text/javascript">
+        //Start script after clicking enter button
+        document.getElementById('enter').onclick = function () {
+            //Assigning variable for user input
+            var fingers = document.getElementById('in').value;
+            //First varifying for valid user input.
+            if (fingers < 0 || fingers > 5) {
+                alert("Invalid input")
+            } else {
+                //Variable used for counting the rounds taken by computer to guess the right figure.
+                var count = 0;
+                //Variable to store random guess by computer.
+                var guess = 0;
+                //Loop only exit when guess == fingers.
+                while (guess != fingers) {
+                    guess = Math.floor((Math.random() * 5) + 1);
+                    count++
+                }
+                alert("Computer took " + count + " Rounds to guess")
+            }
+        }
+    </script>
+</body>
+
+</html>

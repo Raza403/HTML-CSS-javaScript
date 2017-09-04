@@ -1,0 +1,22 @@
+img {
+    display: none;
+}
+h1 {
+    font-variant: small-caps;
+    text-align: center;
+    color: #FFFFFF;
+}
+header{
+    background-color: #A9A9A9;
+}
+a{
+    color: #000000;
+    background-color: #BEBEBE;
+}
+h2{
+    color: #0000FF;
+    font-variant: small-caps;
+}
+.right{
+    background-color: #808080;
+}
