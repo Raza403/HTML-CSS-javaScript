@@ -18,11 +18,7 @@
 
 .container {
     display: flex;
-    border: 10px solid goldenrod;
-    min-height: 100vh;
-    flex-wrap: wrap;
 }
 .box {
-    width: calc(33.3333% - 20px);
-    border: 10px solid mistyrose;
+    flex: 1;
 }
