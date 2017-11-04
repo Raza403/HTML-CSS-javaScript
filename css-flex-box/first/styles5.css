@@ -19,19 +19,3 @@
 .container {
     display: flex;
 }
-.box {
-    flex: 1;
-}
-
-.box4 {
-order: 2;
-}
-.box8 {
-    order: -1;
-}
-.box10 {
-    order: -2;
-}
-.box6 {
-    order: 1;
-}
