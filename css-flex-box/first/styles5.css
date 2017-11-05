@@ -15,7 +15,18 @@
 .box8 {background: purple;}
 .box9 {background: plum;}
 .box10 {background: orange;}
-
 .container {
     display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    width: 50%;
+    /* margin-left: 25%; */
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.box {
+    border: 10px solid rosybrown;
+    width: calc(33.333% - 20px);
+    min-width: 10%;
 }
