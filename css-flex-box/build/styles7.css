@@ -1,0 +1,28 @@
+.box {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.box1 {background: red;}
+.box2 {background: green;}
+.box3 {background: grey;}
+.box4 {background: brown;}
+.box5 {background: olive;}
+.box6 {background: pink;}
+.box7 {background: yellowgreen;}
+.box8 {background: purple;}
+.box9 {background: plum;}
+.box10 {background: orange;}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.box {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}

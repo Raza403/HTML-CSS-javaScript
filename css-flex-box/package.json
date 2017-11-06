@@ -1,0 +1,19 @@
+{
+  "name": "css-flex-box",
+  "version": "1.0.0",
+  "description": "Just trying to add css auto prefixer for flex box",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raza403/HTML-CSS-javaScript/tree/master/css-flex-box"
+  },
+  "author": "Ahmed Raza",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0"
+  }
+}

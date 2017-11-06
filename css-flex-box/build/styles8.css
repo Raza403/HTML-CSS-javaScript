@@ -1,0 +1,36 @@
+.box {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.box1 {background: red;}
+.box2 {background: green;}
+.box3 {background: grey;}
+.box4 {background: brown;}
+.box5 {background: olive;}
+.box6 {background: pink;}
+.box7 {background: yellowgreen;}
+.box8 {background: purple;}
+.box9 {background: plum;}
+.box10 {background: orange;}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;}
+.box{
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+.box2{
+    -webkit-box-flex: 50;
+        -ms-flex-positive: 50;
+            flex-grow: 50;
+}

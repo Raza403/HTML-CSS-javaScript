@@ -1,0 +1,33 @@
+.box {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.box1 {background: red;}
+.box2 {background: green;}
+.box3 {background: grey;}
+.box4 {background: brown;}
+.box5 {background: olive;}
+.box6 {background: pink;}
+.box7 {background: yellowgreen;}
+.box8 {background: purple;}
+.box9 {background: plum;}
+.box10 {background: orange;}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
+}
