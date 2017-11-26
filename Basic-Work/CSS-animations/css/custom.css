@@ -21,7 +21,9 @@
     animation-fill-mode: both;
     /* -webkit-animation-fill-mode: both; this line prevent rotating png to go back to its originalposition. */
 }
-
+#block:hover {
+    animation-name: fadeOut;
+}
 
 @keyframes fadeIn {
     0% {
@@ -39,5 +41,24 @@
         -moz-transform: perspective(400px) rotate(180deg);
         -ms-transform: perspective(400px) rotate(180deg);
         -o-transform: perspective(400px) rotate(180deg);
+}    
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 0%;
+        transform: perspective(400px) rotateX(180deg);
+        -webkit-transform: perspective(400px) rotateX(180deg);
+        -moz-transform: perspective(400px) rotateX(180deg);
+        -ms-transform: perspective(400px) rotateX(180deg);
+        -o-transform: perspective(400px) rotateX(180deg);
+}
+    100% {
+        opacity: 100%;
+        transform: perspective(400px) rotate(90deg);
+        -webkit-transform: perspective(400px) rotate(90deg);
+        -moz-transform: perspective(400px) rotate(90deg);
+        -ms-transform: perspective(400px) rotate(90deg);
+        -o-transform: perspective(400px) rotate(90deg);
 }    
 }
