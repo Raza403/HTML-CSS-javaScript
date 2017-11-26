@@ -1,0 +1,43 @@
+#top-container {
+    background-color: #0bc770;
+    min-height: 800px;
+    padding: 230px 0;
+}
+
+#block {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background: #fff url(../images/block.png) no-repeat 45px;
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+}
+.animated {
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    animation-fill-mode: both;
+    /* -webkit-animation-fill-mode: both; this line prevent rotating png to go back to its originalposition. */
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+        transform: perspective(400px) rotateX(90deg);
+        -webkit-transform: perspective(400px) rotateX(90deg);
+        -moz-transform: perspective(400px) rotateX(90deg);
+        -ms-transform: perspective(400px) rotateX(90deg);
+        -o-transform: perspective(400px) rotateX(90deg);
+}
+    100% {
+        opacity: 0%;
+        transform: perspective(400px) rotate(180deg);
+        -webkit-transform: perspective(400px) rotate(180deg);
+        -moz-transform: perspective(400px) rotate(180deg);
+        -ms-transform: perspective(400px) rotate(180deg);
+        -o-transform: perspective(400px) rotate(180deg);
+}    
+}
