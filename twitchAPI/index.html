@@ -1,12 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- HTML5 -->
 <html lang="en">
-
+<html dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Meta Description -->
+    <meta name="description" content="This web app is made using twitch API, tells user about channel status and content being palyed">
+    <!-- To run web application in full-screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!--Custom stylesheet-->
-    <link rel="stylesheet" href="stylesheets/app.css">
+    <link rel="stylesheet" href="./build/build.min.css">
     <title>Twitch.tv API Usage</title>
 </head>
 
@@ -30,17 +35,17 @@
             <!--First channel div-->
             <div id="fcc" class="row mt-3 pt-3 pl-2 channels">
                 <img src="https://avatars2.githubusercontent.com/u/9892522?v=4&s=200" alt="FCC logo">
-                <a href="https://www.twitch.tv/freecodecamp" target="_blank"><p class="ml-2 font">FreeCodeCamp</p></a>
+                <a rel="canonical" href="https://www.twitch.tv/freecodecamp" target="_blank"><p class="ml-2 font">FreeCodeCamp</p></a>
             </div>
             <!--Second channel div-->
             <div id="esl" class="row mt-3 pt-3 pl-2 channels">
                 <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-profile_image-d6db9488cec97125-300x300.jpeg" alt="ESL_SC2 Logo">
-                <a href="https://www.twitch.tv/esl_sc2" target="_blank"><p class="ml-2 font">ESL_SC2</p></a>
+                <a rel="canonical" href="https://www.twitch.tv/esl_sc2" target="_blank"><p class="ml-2 font">ESL_SC2</p></a>
             </div>
             <!--Third channel div-->
             <div id="ninja" class="row mt-3 pt-3 pl-2 channels">
                 <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/noobs2ninjas-profile_image-34707f847a73d934-300x300.png" alt="Noob to Ninjas Logo">
-                <a href="https://www.twitch.tv/noobs2ninjas" target="_blank"><p class="ml-2 font">Noob to Ninjas</p></a>
+                <a rel="canonical" href="https://www.twitch.tv/noobs2ninjas" target="_blank"><p class="ml-2 font">Noob to Ninjas</p></a>
             </div>
 
         </div>
@@ -48,9 +53,7 @@
 
 
 
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="bower_components/tether/dist/js/tether.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="./vendor/jquery.min.js"></script>
         <script>
         $(document).ready(function(){
         //Get data from api
