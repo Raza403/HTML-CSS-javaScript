@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring Arrays</title>
+</head>
+
+<body>
+
+<script>
+const details = ["ahmed",123,"devbros.tk"];
+const [name,id,website] = details;
+
+const data = 'Basketball,Sports,90210,23,wes,cool';
+const [ItemName, cat, sku, inventory] = data.split(',');
+console.log(ItemName,cat,sku,inventory);
+const team = ['wes','ahemd','ammad','sohaib','asadsaad']
+const [captain,assistant,...players] = team;
+console.log(captain,assistant);
+</script>
+</body>
+
+</html>

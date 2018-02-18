@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For loop</title>
+</head>
+<body>
+<p>hi i am p 01</p>
+<p>hi i am p 02</p>
+<p>hi i am p 03</p>
+<p>hi i am p 04</p>
+<p>hi i am p 05</p>
+
+<script>
+    const cuts = ['cuts','briskit','shank','rib'];
+
+    for(const [i,cut] of cuts.entries()){
+        console.log(`${cut} is the ${i+1} item`);
+    }
+
+function addUpNumbers(){
+let total =0;
+for(const num of arguments){
+    total += num;
+}
+console.log(total);
+return total;
+
+}
+
+addUpNumbers(10,22,34,52,34,54,23);
+
+// const name = 'ahmed raza';
+// for (char of name){
+//     console.log(char);
+// }
+
+
+//You can iterate over a nodelist without converting it into array
+//using for of method
+const paragraphs = document.querySelectorAll("p");
+for (const paragraph of paragraphs){
+    paragraph.addEventListener('click',function(){
+console.log(this.textContent);
+    });
+}
+</script>
+</body>
+</html>

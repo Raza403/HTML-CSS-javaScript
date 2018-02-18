@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Proxies!</title>
+</head>
+
+<body>
+  <script>
+    const person ={name: 'ahmed', age: 23};
+    const personProxy = new Proxy(person, {
+      get(target, name){
+        // console.log('Someone is asking for', target,name);
+        return target[name];
+      },
+      set(target, name, value){
+        if (typeof value === 'string'){
+          target[name] = value.trim();
+        }
+      }
+    });
+    personProxy.name = 'Raza';
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+
+:root{
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 0px;
+}
+label{
+    display: block;
+}
+img{
+    width: 100%;
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+}
+.controls{
+    margin-bottom: 10px;
+}
+.highlight{
+    color: var(--base);
+    font-size: 130%;
+}

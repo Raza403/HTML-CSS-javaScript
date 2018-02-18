@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions 1</title>
+</head>
+
+<body>
+    <h1>Please look at console.</h1>
+
+    <script>
+        const names = ["ahmed", "ammad", "sohaib"];
+
+        const fullNames = names.map(function(name){
+            return `${name} raza`
+        });
+
+        const fullNames2 = names.map((name) => {
+            return `${name} raza`
+        });
+        const fullNames3 = names.map(name => {
+            return `${name} raza`
+        });
+        const fullNames4 = names.map(name => `${name} raza`);
+    </script>
+</body>
+
+</html>

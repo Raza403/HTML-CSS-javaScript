@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String Methods</title>
+</head>
+<body>
+    
+
+<script>
+    const course = "RFG2";
+    const flight = "20-AC2018-jz";
+    const accountNumber = "011057859";
+
+    const make = "BMW";
+    const color = "red";
+    const model = "x5";
+
+    //startsWith method
+    console.log(course.startsWith("RF"));//True
+    //startsWith from 3rd word
+    //Here 3 represents start of string to be considered
+    console.log(flight.startsWith("AC",3));//True
+    //endsWith() Looks for G and 3 represents last word of string Which is G in
+    // this case
+    console.log(course.endsWith("G",3));//True
+    //includes()
+    console.log(flight.includes("jz"));//True
+
+    function leftPad(str, length=20){
+        return `${' '.repeat(length-str.length)}${str}`;
+    }
+console.log(leftPad(make));
+console.log(leftPad(color));
+console.log(leftPad(model));    
+
+</script>
+</body>
+</html>

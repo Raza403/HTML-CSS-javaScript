@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spread Examples</title>
+</head>
+<body>
+  <div class="people">
+    <p>Wes</p>
+    <p>Kait</p>
+    <p>Randy</p>
+  </div>
+<script>
+    //Converting a node list into an array using spread operator
+  const people = [...document.querySelectorAll(".people p")];
+  console.log(people);
+
+  const deepDish = {
+    pizzaName: 'Deep Dish',
+    size: 'Medium',
+    ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+  };
+  //Concatanating two arrays
+const shoppingList = ['Milk', 'Flour', ...deepDish.ingredients]
+
+//We can delete an object from an array and form a new array
+// With spread operator  
+  const comments = [
+    { id: 209384, text: 'I love your dog!' },
+    { id: 523423, text: 'Cuuute! 🐐' },
+    { id: 632429, text: 'You are so dumb' },
+    { id: 192834, text: 'Nice work on this wes!' },
+  ];
+
+   const commentIndex = comments.findIndex(comment => comment.id === 632429);
+   const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex +1)];
+  
+</script>
+</body>
+</html>

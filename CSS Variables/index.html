@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Controlling CSS Variables using JS</title>
+
+  <!-- Bootstrap -->
+  <link href="./node_modules/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <header>
+    <div class="container-fluid">
+      <h1 class="h1 text-center col-xs-12">Update CSS variables with
+        <span class="highlight">JS</span>
+      </h1>
+      <div class="controls col-xs-12">
+        <div class="col-sm-4 text-center">
+          <label for="spacing" class="h3">Spacing</label>
+          <input type="range" id="spacing" name="spacing" min="10" max="200" value="10" data-sizing="px">
+        </div>
+        <div class="col-sm-4 text-center">
+          <label for="blur" class="h3">Blur</label>
+          <input type="range" id="blur" name="blur" min="0" max="25" value="10" data-sizing="px">
+        </div>
+        <div class="col-sm-4 text-center">
+          <label for="color" class="h3">Color</label>
+          <input type="color" id="color" name="base" value="#ffc600">
+        </div>
+      </div>
+  </header>
+  <div class="col-xs-12" id="main">
+    <img class="img-responsive" src="https://source.unsplash.com/7bwQXzbF6KE/800x500" alt="Girl on mountain trail">
+  </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    function handleChange(){
+      let suffix = this.dataset.sizing || "";
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+    let inputs = document.querySelectorAll(".controls input");
+    inputs.forEach(input => input.addEventListener("change", handleChange));
+    inputs.forEach(input => input.addEventListener("mousemove", handleChange));
+  </script>
+</body>
+
+</html>

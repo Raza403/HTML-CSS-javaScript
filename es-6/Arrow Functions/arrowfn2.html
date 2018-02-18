@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Function 2</title>
+</head>
+<body>
+    <h1>Have a look at console</h1>
+
+<script>
+    const race = "100m Dash"
+    const winners = ["ahmed", "Ammad", "Sohaib"];
+    const win = winners.map((winner, i)=> ({name: winner,race,place:i+1}));
+    
+
+    const ages = [34,67,34,32,88,45,39.77,62,64];
+    const above60 = ages.filter(age => age>60).sort((a,b)=> a>b ? 1 : -1);
+    console.log(above60);
+</script>
+</body>
+</html>

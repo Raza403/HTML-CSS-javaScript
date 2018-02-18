@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creating Promises!</title>
+</head>
+<body>
+<script>
+  const p = new Promise((resolve,reject)=> {
+    setTimeout(() => {
+      resolve('Ahemd is cool')
+    }, 1000);
+  })
+  p.then(data => console.log(data));
+</script>
+</body>
+</html>
